@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../nav.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="../footer.css">
+    <script
+        src="https://kit.fontawesome.com/64d58efce2.js"
+        crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+ <div class="nav">
+    <div class="navbar">
+        <img src="../icons/Logo.svg" alt="Jean-Luc Makiola" class="nav-logo">
+        <div class="nav-toggle toggled">
+            <div class="line"></div>
+            <div class="toggler"></div>
+        </div>
+    </div>
+    <div class="nav-popup-contact expanded">
+        <p>GET IN TOUCH</p>
+        <a href="../contact/contact.html">jlmakiola@outlook.de</a>
+    </div>
+    <div class="nav-popup-directory expanded">
+        <ul class="nav-list">
+            <li class="nav-list-item"><a href="/home/home.html">Home</a></li>
+            <li class="nav-list-item"><a href="/about/about.html">About</a></li>
+            <li class="nav-list-item"><a href="">Works</a></li>
+            <li class="nav-list-item"><a href="/contact/contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <script>
+        const nav_toggle = document.querySelector('.nav-toggle');
+        const nav_popup_directory = document.querySelector('.nav-popup-directory');
+        const nav_popup_contact = document.querySelector('.nav-popup-contact');
+
+        nav_toggle.addEventListener('click',()=>{
+            console.log('clicked');
+            nav_popup_contact.classList.toggle('expanded');
+            nav_popup_directory.classList.toggle('expanded');
+            nav_toggle.classList.toggle('toggled');
+        })
+    </script>
+ </div>
+
+ 
+
+ <footer>
+    <div class="footer--contact">
+        <img src="../images/contact-03.png" alt="">
+        <div class="footer--text">
+            <p>GET IN TOUCH</p>
+            <a href="../contact/contact.html">jlmakiola@outlook.de</a>
+        </div>
+    </div>    
+    <div class="copyright">
+        <p>	&#169;</p>
+        <p>Jean-Luc Makiola, All rights reserved</p>
+    </div>
+ </footer>
+
+ <script>
+    const inputs = document.querySelectorAll(".input");
+
+function focusFunc() {
+  let parent = this.parentNode;
+  parent.classList.add("focus");
+}
+
+function blurFunc() {
+  let parent = this.parentNode;
+  if (this.value == "") {
+    parent.classList.remove("focus");
+  }
+}
+
+inputs.forEach((input) => {
+  input.addEventListener("focus", focusFunc);
+  input.addEventListener("blur", blurFunc);
+});
+
+</script>
+</body>
+</html>
