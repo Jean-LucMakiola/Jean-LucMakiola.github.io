@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
 *{
    margin: 0;
    padding: 0;
@@ -9,15 +13,16 @@ nav{
     flex-direction: row;
     justify-content: end;
     align-items: center;
-    margin: 1.2rem 2.5rem;
+    margin: .5vh 2vw;
+    background-color: white;
 }
 
 .logo{
     margin-right: auto;
     text-decoration: none;
-    color: #222222;
+    color: #1D1F21;
     cursor: pointer;
-    font-size: 1.8rem;
+    font-size:  clamp(16px,4vw,60px);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     transition: all 0.2s ease;
 }
@@ -29,21 +34,22 @@ nav{
 
 .contact{
     border-radius: 4rem;
-    background-color: lightgray;
-    padding: .2rem .2rem .2rem .4rem;
+    background-color: #E7E7E7;
+    padding: .3rem .2rem .3rem .4rem;
     cursor: pointer;
     transition: all 0.2s;
     display: flex;
     align-items: center;
     text-decoration: none;
     margin-right: 1.5rem;
+    height: 35px;
 }
 
 .contact p{
-    color: #222222;
+    color: #1D1F21;
     text-decoration: none;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1rem;
+    font-size: 1.4rem;
     padding-right: .2rem;
 }
 
@@ -52,51 +58,52 @@ nav{
 }
 
 .contact:hover .contact-images img{
-    transform: translateY(-26px);
+    transform: translateY(-115%);
 }
 
 .contact-images{
-    width: 22px;
-    height: 22px;
-    background-color: #000;
+    width: 26px;
+    height: 26px;
+    background-color: #1D1F21;
     border-radius: 100%;
     overflow: hidden;
 }
 
 .contact-images img{
-    width: inherit;
-    height: inherit;
+    width: 26px;
+    height: 26px;
 }
 
 
 .line-toggle-detectionbox{
-    width: 28.4px;
-    height: 28.4px;
+    width: 35px;
+    height: 35px;
     position: relative;
     border-radius: 100%;
-    background-color: lightgray;
+    background-color: #e7e7e7;
     rotate: 180deg;
+    cursor: pointer;
 }
 
 
 .line-toggle{
-    background-color: #000;
+    background-color: #1D1F21;
     width: 22px;
     height: 2px;
     transition: all 0.2s;
     position: absolute;
     
-    bottom: 14.2px;
-    right: 14.2px;
+    bottom: 50%;
+    right: 50%;
     transform: translateX(50%) translateY(50%);
 }
 
 
 .line-toggle::before{
     position: absolute;
-    top: -.3rem;
+    top: -6px;
     content: "";
-    background-color: #000;
+    background-color: #1D1F21;
     width: 18px;
     height: 2px;
     transition: all 0.2s;
@@ -104,9 +111,9 @@ nav{
 
 .line-toggle::after{
     position: absolute;
-    top: .3rem;
+    top: 6px;
     content: "";
-    background-color: #000;
+    background-color: #1D1F21;
     width: 18px;
     height: 2px;
     transition: all 0.2s;
@@ -118,12 +125,12 @@ nav{
     background-color: transparent;
 }
 .line-toggle-detectionbox:hover .line-toggle::before{
-    width: 13.5px;
+    width: 13px;
     transform: rotate(45deg);
     top:0;
 }
 .line-toggle-detectionbox:hover .line-toggle::after{
-    width: 13.5px;
+    width: 13px;
     transform: rotate(-45deg); 
     top: 0;
     right: 0;
@@ -132,3 +139,63 @@ nav{
 .toggle-expanded{
     transform: rotate(180deg);
 }
+
+.page-wrapper{
+    padding: 15vh 2vw;
+    display: flex;
+}
+
+.hero-wrapper{
+    display: flex;
+    flex-direction: column ;
+}
+
+.hero-wrapper h1{
+    font-size: clamp(40px, 8vw, 175px);
+    font-family:'Quicksand', sans-serif;
+    font-weight:700;
+    color: #1D1F21;
+}
+
+.hero-wrapper em{
+    color: #909090;
+    font-style: normal;
+}
+
+.hero-wrapper-section-2{
+    display: flex;
+    font-family:'Quicksand', sans-serif;
+    margin-top: 2vh;
+    font-size: clamp(12px,4vw,20px);
+    columns: 2;
+    justify-content: flex-start;
+}
+
+.hero-wrapper-section-2 h3{
+    margin-right: auto;
+    width: clamp(5vw, 30vw, 12vw);
+    color: #000;
+    font-weight: 600;
+    font-size: clamp(12px,3vw,16px);
+}
+
+.hero-wrapper-section-2-1{
+    display: flex;
+    width: clamp(5vw, 30vw, 20vw);
+    flex-direction: column;
+    color: #1D1F21;
+    font-weight: 400; 
+}
+
+.hero-wrapper-section-2-1 .contact{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    max-width: 110px;
+    margin: 2vh 0;
+    background-color: #1D1F21;
+}
+
+.hero-wrapper-section-2-1 .contact p{
+    color: #Fff;
+}
+
