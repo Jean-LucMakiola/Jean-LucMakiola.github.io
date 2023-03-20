@@ -1,7 +1,12 @@
-const element = document.querySelector('.line-toggle-detectionbox');
+const detectionbox = document.querySelector('.line-toggle-detectionbox');
+const navExpand = document.querySelector('.nav-expand-container');
+const backgroundblur = document.querySelector('.backgroundblur');
 
-console.log(element);
-    
-element.addEventListener('click', ()=>{
-    element.classList.toggle('toggle-expanded');
+console.log(backgroundblur);
+
+detectionbox.addEventListener('click', ()=>{
+    detectionbox.classList.toggle('toggle-expanded');
+    navExpand.classList.toggle('nav-expanded');
+    backgroundblur.classList.toggle('blur-toggled');
 });
+
