@@ -10,3 +10,5 @@ detectionbox.addEventListener('click', ()=>{
     backgroundblur.classList.toggle('blur-toggled');
 });
 
+
+    
