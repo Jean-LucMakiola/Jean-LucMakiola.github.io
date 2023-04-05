@@ -726,7 +726,6 @@ nav .contact_button{
 
 @media  screen and (min-width: 1440px) {
     .about-wrapper{
-        flex-direction: row;
         justify-content: space-evenly;
     }
     .about-col2-2{
