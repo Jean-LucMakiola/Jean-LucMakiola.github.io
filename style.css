@@ -5,21 +5,20 @@ a:any-link{
     cursor: pointer;
     text-decoration: none;
 }
-
+.backgroundblur-container{
+    position: relative;
+    height: 0;
+    width: 0;
+}
 .backgroundblur{
     position: absolute;
     z-index: 10;
-    width: 100%;
-    height: 1800vh;
-    top: 0;
-    left: 0;
+    width: 120vw;
+    height: 120vh;
+    top: -10vh;
+    left: -10vh;
     background-color: rgba(55, 55, 55, 0.7);
     backdrop-filter: blur(4px);
-    transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
 }
 .backgroundblur.blur-toggled{
     position: sticky;
@@ -74,9 +73,11 @@ nav{
     flex-direction: row;
     justify-content: end;
     align-items: center;
-    padding: .5vh 2vw;
+    padding: 2vh 2vw;
+    background-color: transparent;
+}
+nav.nav-expanded{
     background-color: white;
-    padding: 1vh 0;
 }
 
 .logo{
@@ -152,8 +153,12 @@ nav .contact_button{
     background-color: #1D1F21;
     width: 18px;
     height: 2px;
-    transition: all 0.2s;
+    transition: all 0.3s ease;
     right: 0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
  
 
@@ -185,6 +190,7 @@ nav .contact_button{
 
 }
 
+
 .nav-expand-container{
     z-index: 100;
     display: flex;
@@ -205,11 +211,11 @@ nav .contact_button{
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
-    transition: all 0.3s ease-out;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
+    transition: all 0.7s ease-out;
+    -webkit-transition: all 0.7s ease-out;
+    -moz-transition: all 0.7s ease-out;
+    -ms-transition: all 0.7s ease-out;
+    -o-transition: all 0.7s ease-out;
 }
 
 .nav-links-container{
@@ -230,6 +236,7 @@ nav .contact_button{
     align-items: end;
     justify-content: start;
     position: relative;
+    overflow-y: hidden;
 }
 
 .nav-links {
@@ -243,6 +250,7 @@ nav .contact_button{
     align-items: end;
     justify-content: start;
     position: relative;
+    overflow-y: hidden;
 }
 @media screen and (max-width:1250px){
     .nav-expand-container{
@@ -278,6 +286,8 @@ nav .contact_button{
     justify-content: start;
     align-items: start;
 }
+
+
 .nav-link-titles a{
     font-size: 1.8vh;
     font-weight: 200;
