@@ -490,7 +490,6 @@ nav .contact_button{
     gap: 0.2vw;
     display: flex;
     padding-bottom: 0.6vw;
-    position: relative;
 }
 
 .image-gallery_col1{
@@ -533,6 +532,8 @@ nav .contact_button{
         height: 0px;
         width: 0;
       }
+
+
     
     .image-gallery{
         max-height: 200vh;
@@ -541,7 +542,6 @@ nav .contact_button{
         grid-auto-columns: 92%;
         scroll-snap-type: inline mandatory;
         overflow-x: auto;
-
     }
     .image-gallery > *{
         width: 100%;
@@ -739,12 +739,12 @@ nav .contact_button{
         justify-content: space-evenly;
     }
     .about-col2-2{
-        max-width: 45vw;
+        max-width: 55vw;
     }
 }
 @media  screen and (min-width: 1920px) {
     .about-col2-2{
-        max-width: 28vw;
+        max-width: 40vw;
     }
 }
 
